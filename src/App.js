@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./App.css";
+import "./App.scss";
+import "font-awesome/css/font-awesome.min.css";
 
 //components
 import Header from "./components/Header";
@@ -19,34 +20,25 @@ class App extends Component {
   }
 
   handleScroll(e) {
-    /* let scrollTop = e.srcElement.body.scrollTop,
-      itemTranslate = Math.min(0, scrollTop / 3 - 60);
-
-    console.log(scrollTop);
-    console.log(itemTranslate);
-
-    this.setState({
-      transform: itemTranslate
-    }); */
-
     ReactDOM.findDOMNode(this.refs.headerElement).classList.add(
       "scroll__effect"
     );
-
-    //console.log("scrolling ", e);
   }
   render() {
     const portofolioList = portofolioDetails.map(detail => (
-      <section key={"deatil-" + detail.id} id={detail.id}>
+      <section
+        key={"deatil-" + detail.id}
+        pathname={detail.pathname}
+        id={detail.id}
+      >
         <div className="sec__desc">
-          <p>{detail.description}</p>
+          <pre>{JSON.stringify(detail.description, null, 2)}</pre>
         </div>
       </section>
     ));
     return (
       <div>
         <Header ref="headerElement" />
-
         {portofolioList}
       </div>
     );

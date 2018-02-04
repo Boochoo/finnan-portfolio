@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  &:nth-of-type(1) {
+    background-image: url("./assets/170.jpg");
+  }
+  &:nth-of-type(2) {
+    background-image: url("./assets/workplace.jpg");
+  }
+  &:nth-of-type(3) {
+    background-image: url("./assets/coffee.jpg");
+  }
+
+  &:nth-of-type(4) {
+    background-image: url("./assets/piano.jpg");
+  }
+}
+
+.sec__desc {
+  //margin: 9vh 26vw;
+  background: rgba(30, 30, 30, 0.85);
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+
+  .header_clickable {
+    align-items: center;
+    width: 6em;
+    height: 6em;
+    background: darkorange;
+    border-radius: 50%;
+    margin: 1em auto;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+.header a:hover,
+.header .active {
+  background-color: #333;
+  color: darkorange;
+  //border: 4em solid red;
+}
+.fa.icon {
+  &__home,
+  &__experience,
+  &__skills,
+  &__education {
+    display: flex !important;
+
+    &::before {
+      font-size: 3.1em;
+      margin: 0 auto;
+    }
+  }
+}
+
+.scroll__effect {
+  flex-direction: column;
+  top: 50%;
+  transform: rotate(0deg) translate(0%, -50%);
+  transition: transform 2s;
+
+  .header_clickable {
+    margin-left: 0;
+    margin-left: 1em;
+    width: 4.5em;
+    height: 4.5em;
+    margin-bottom: -0.6em;
+
+    &::before {
+      font-size: 2.5em;
+    }
+  }
+}
+
+/* animation: xAxis 2.5s cubic-bezier(0.02, 0.01, 0.21, 1);
+ */
+
+/* @keyframes xAxis {
+  0% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(10px);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(50px);
+  }
+  100% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(100px);
+  }
+}
+ */
+pre {
+  text-align: left;
+
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: monospace;
+  font-size: 2rem;
+  color: greenyellow;
+  white-space: pre-wrap;
+  //overflow-x: auto;
+  //display: flex;
+  //width: 10;
+}
+
+/* section[pathname="skills"] .sec__desc pre {
+  width: 75vw;
+} */
