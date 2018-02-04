@@ -1,0 +1,91 @@
+section {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+section:nth-of-type(1) {
+  background-image: url("./assets/boochoo.jpg");
+}
+section:nth-of-type(2) {
+  background-image: url("./assets/workplace.jpg");
+}
+section:nth-of-type(3) {
+  background-image: url("./assets/coffee.jpg");
+}
+
+section:nth-of-type(4) {
+  background-image: url("./assets/piano.jpg");
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.sec__desc {
+  margin: 9vh 26vw;
+  background: rgba(30, 30, 30, 0.7);
+}
+.sec__desc p {
+  padding: 2rem;
+  font-family: monospace;
+  font-size: 2rem;
+  color: antiquewhite;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+.header_clickable {
+  align-items: center;
+  width: 6em;
+  height: 6em;
+  background: darkorange;
+  border-radius: 50%;
+  margin: 1em auto;
+}
+
+.scroll__effect {
+  flex-direction: column;
+  top: 50%;
+  transition: transform 2s;
+  transform: rotate(0deg) translate(0%, -50%);
+}
+/* animation: xAxis 2.5s cubic-bezier(0.02, 0.01, 0.21, 1);
+ */
+.scroll__effect .header_clickable {
+  margin-left: 0;
+  margin-left: 1em;
+  /* width: 3em;
+  height: 3em; */
+  margin-bottom: -0.6em;
+}
+
+/* @keyframes xAxis {
+  0% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(10px);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(50px);
+  }
+  100% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(100px);
+  }
+}
+ */
