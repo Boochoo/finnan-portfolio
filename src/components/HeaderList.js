@@ -1,31 +1,37 @@
 import React, { Component } from "react";
 //import { NavLink } from "react-router-dom";
 
+import Scroll from "react-scroll-to-element";
+
 import portofolioDetails from "../data/data";
 
 class HeaderList extends Component {
   state = {
-    index: 1
+    activeId: 0
   };
-  headerHandleClick(i) {
+  headerHandleClick = index => {
     this.setState({
-      index: i
+      activeId: index
     });
-    //this.refs[i].classList.add("active");
-    //this.refs[-i].classList.remove("active");
-    console.log("clicked", this.refs[i]);
-  }
+  };
+
   render() {
     const headerLists = portofolioDetails.map((headerlist, index) => (
-      <a
-        ref={index}
-        href={"#" + headerlist.id}
-        className={headerlist.classNames}
-        key={headerlist.id}
-        onClick={this.headerHandleClick.bind(this, headerlist.id)}
-      >
-        <div />
-      </a>
+      <Scroll type="id" element={headerlist.title} key={headerlist.id}>
+        <a
+          ref={index}
+          href={"#" + headerlist.title}
+          className={
+            this.state.activeId === index
+              ? headerlist.classNames + " active"
+              : headerlist.classNames
+          }
+          key={headerlist.id}
+          onClick={this.headerHandleClick.bind(this, index)}
+        >
+          <div />
+        </a>
+      </Scroll>
     ));
     return <div className="header">{headerLists}</div>;
   }

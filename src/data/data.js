@@ -21,12 +21,12 @@ const portofolioDetails = [
     title: "education",
     description: [
       {
-        diploma: "bachelor degree",
+        diploma: "Bachelor degree",
         field_of_study: "Media engineering",
         academy: "Metropolia University of applied sciences"
       },
       {
-        diploma: "bachelor degree of art",
+        diploma: "Bachelor degree of art",
         field_of_study: "Music composition and performance.",
         academy: "Yared School of Music, AAU."
       }
@@ -40,22 +40,22 @@ const portofolioDetails = [
     title: "experience",
     description: [
       {
-        status: "currently working",
+        status: "Currently working",
         where: "Apprix Oy",
         what: "Frontend Developer",
-        year: "Dec 2016 - present"
+        year: "Dec, 2016 - present"
       },
       {
-        status: "thesis project",
+        status: "Thesis project",
         where: "Game Refinery",
-        what: "data visualisation based project with AngularJS",
-        year: "Aug 2016 - Dec 2016"
+        what: "Data visualisation based project with AngularJS",
+        year: "Aug, 2016 - Dec 2016"
       },
       {
         status: "Internship",
         where: "Metropolia UAS",
         what: "Finnish floorball Association cross platform mobile app",
-        year: "Aug 2015 - Jan 2016"
+        year: "Aug, 2015 - Jan 2016"
       }
     ],
     classNames: "header_clickable icon__experience fa fa-briefcase",

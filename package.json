@@ -95,6 +95,7 @@
   "devDependencies": {
     "node-sass": "^4.7.2",
     "react-json-inspector": "^7.1.1",
+    "react-scroll-to-element": "^0.2.0",
     "sass-loader": "^6.0.6"
   }
 }

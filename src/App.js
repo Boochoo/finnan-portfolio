@@ -27,9 +27,9 @@ class App extends Component {
   render() {
     const portofolioList = portofolioDetails.map(detail => (
       <section
-        key={"deatil-" + detail.id}
+        key={"deatil-" + detail.title}
         pathname={detail.pathname}
-        id={detail.id}
+        id={detail.title}
       >
         <div className="sec__desc">
           <pre>{JSON.stringify(detail.description, null, 2)}</pre>

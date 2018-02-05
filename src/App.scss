@@ -3,6 +3,7 @@
 }
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 section {
@@ -117,12 +118,12 @@ pre {
   text-align: left;
 
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.2rem;
   font-family: monospace;
   font-size: 2rem;
   color: greenyellow;
   white-space: pre-wrap;
-  //overflow-x: auto;
+  overflow-x: auto;
   //display: flex;
   //width: 10;
 }
