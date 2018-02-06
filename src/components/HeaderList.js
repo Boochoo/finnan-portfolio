@@ -17,7 +17,7 @@ class HeaderList extends Component {
 
   render() {
     const headerLists = portofolioDetails.map((headerlist, index) => (
-      <Scroll type="id" element={headerlist.title} key={headerlist.id}>
+      <Scroll type="id" element={headerlist.title} key={index}>
         <a
           ref={index}
           href={"#" + headerlist.title}
